@@ -5,7 +5,12 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 
 const FRAME_COUNT = 180;
 
-export default function ScrollCanvas() {
+interface ScrollCanvasProps {
+  onLoadProgress?: (progress: number) => void;
+  onLoadComplete?: () => void;
+}
+
+export default function ScrollCanvas({ onLoadProgress, onLoadComplete }: ScrollCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
@@ -28,15 +33,18 @@ export default function ScrollCanvas() {
       img.src = `/smart-glasses-all-frames-hd-cropped/ezgif-frame-${String(i).padStart(3, '0')}.png`;
       img.onload = () => {
         loadedCount++;
+        const progress = (loadedCount / FRAME_COUNT) * 100;
+        onLoadProgress?.(progress);
         if (loadedCount === FRAME_COUNT) {
           setImagesLoaded(true);
+          onLoadComplete?.();
         }
       };
       loadedImages.push(img);
     }
 
     setImages(loadedImages);
-  }, []);
+  }, [onLoadProgress, onLoadComplete]);
 
   // Render frame on scroll
   useEffect(() => {
@@ -224,8 +232,8 @@ export default function ScrollCanvas() {
           />
 
           {!imagesLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-white/60 text-sm">Loading experience...</div>
+            <div className="absolute inset-0 flex items-center justify-center bg-deep-black">
+              <div className="text-white/60 text-sm">Loading...</div>
             </div>
           )}
         </div>
