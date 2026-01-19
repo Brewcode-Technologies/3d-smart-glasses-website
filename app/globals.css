@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-deep-black text-white antialiased;
+  }
+  
+  :root {
+    --background: 5 5 5;
+    --foreground: 255 255 255;
+    --primary: 0 80 255;
+    --muted: 10 10 12;
+    --border: 255 255 255 / 0.1;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(180deg, #ffffff 0%, #00D6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 20px rgba(0, 214, 255, 0.3);
+  }
+  
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(135deg, #0050FF 0%, #00D6FF 100%);
+    padding: 1px;
+    border-radius: 9999px;
+  }
+  
+  .gradient-border-inner {
+    background: #050505;
+    border-radius: 9999px;
+  }
+}
