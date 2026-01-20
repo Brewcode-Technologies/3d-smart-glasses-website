@@ -30,7 +30,7 @@ export default function ScrollCanvas({ onLoadProgress, onLoadComplete }: ScrollC
 
     for (let i = 1; i <= FRAME_COUNT; i++) {
       const img = new Image();
-      img.src = `/video-frames-cropped/frame-${String(i).padStart(3, '0')}.png`;
+      img.src = `/video-frames-enhanced/frame-${String(i).padStart(3, '0')}.png`;
       img.onload = () => {
         loadedCount++;
         const progress = (loadedCount / FRAME_COUNT) * 100;
