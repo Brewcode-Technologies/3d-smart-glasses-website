@@ -129,19 +129,19 @@ export default function ScrollCanvas({ onLoadProgress, onLoadComplete }: ScrollC
           {/* Engineering Section (15-40%) */}
           <motion.div
             style={{ opacity: engineeringOpacity }}
-            className="absolute bottom-32 left-8 md:left-16 max-w-md"
+            className="absolute bottom-32 left-8 md:left-16"
             id="optics-section"
           >
-            <div className="mb-2">
-              <span className="text-xs font-semibold tracking-widest uppercase text-sony-blue">01 — Optics</span>
+            <div className="mb-3 inline-block">
+              <span className="text-xs font-bold tracking-[0.3em] uppercase text-electric-cyan">01 — Optics</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-black tracking-[-0.02em] mb-5 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+            <h2 className="text-6xl md:text-8xl font-black tracking-[-0.02em] mb-6 bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,214,255,0.3)]">
               Precision-engineered optics.
             </h2>
-            <p className="text-white/75 text-base md:text-lg leading-relaxed mb-3 font-light">
+            <p className="text-base md:text-lg text-white/70 max-w-md font-light leading-relaxed border-l-2 border-electric-cyan/50 pl-4 mb-3">
               Waveguide displays, micro-projectors, and advanced coatings deliver clarity in any environment.
             </p>
-            <p className="text-white/75 text-base md:text-lg leading-relaxed font-light">
+            <p className="text-base md:text-lg text-white/70 max-w-md font-light leading-relaxed border-l-2 border-electric-cyan/50 pl-4">
               Every component is optimized for transparency, brightness, and all-day wear.
             </p>
           </motion.div>
@@ -149,25 +149,25 @@ export default function ScrollCanvas({ onLoadProgress, onLoadComplete }: ScrollC
           {/* Sensing Section (40-65%) */}
           <motion.div
             style={{ opacity: sensingOpacity }}
-            className="absolute bottom-32 left-8 md:left-16 max-w-md"
+            className="absolute bottom-32 left-8 md:left-16"
             id="intelligence"
           >
-            <div className="mb-2">
-              <span className="text-xs font-semibold tracking-widest uppercase text-sony-blue">02 — Intelligence</span>
+            <div className="mb-3 inline-block">
+              <span className="text-xs font-bold tracking-[0.3em] uppercase text-electric-cyan">02 — Intelligence</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-black tracking-[-0.02em] mb-5 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+            <h2 className="text-6xl md:text-8xl font-black tracking-[-0.02em] mb-6 bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,214,255,0.3)]">
               Spatial awareness, intelligently tuned.
             </h2>
-            <div className="space-y-3">
-              <p className="text-white/75 text-base md:text-lg leading-relaxed font-light flex items-start gap-2">
+            <div className="space-y-3 max-w-md">
+              <p className="text-base md:text-lg text-white/70 font-light leading-relaxed border-l-2 border-electric-cyan/50 pl-4 flex items-start gap-2">
                 <span className="text-electric-cyan mt-1">→</span>
                 <span>Environmental sensors analyze the world in real-time.</span>
               </p>
-              <p className="text-white/75 text-base md:text-lg leading-relaxed font-light flex items-start gap-2">
+              <p className="text-base md:text-lg text-white/70 font-light leading-relaxed border-l-2 border-electric-cyan/50 pl-4 flex items-start gap-2">
                 <span className="text-electric-cyan mt-1">→</span>
                 <span>Context-aware computing adapts to your surroundings.</span>
               </p>
-              <p className="text-white/75 text-base md:text-lg leading-relaxed font-light flex items-start gap-2">
+              <p className="text-base md:text-lg text-white/70 font-light leading-relaxed border-l-2 border-electric-cyan/50 pl-4 flex items-start gap-2">
                 <span className="text-electric-cyan mt-1">→</span>
                 <span>Information stays relevant—never overwhelming.</span>
               </p>
@@ -177,19 +177,19 @@ export default function ScrollCanvas({ onLoadProgress, onLoadComplete }: ScrollC
           {/* Display Section (65-85%) */}
           <motion.div
             style={{ opacity: displayOpacity }}
-            className="absolute bottom-32 left-8 md:left-16 max-w-md"
+            className="absolute bottom-32 left-8 md:left-16"
             id="display"
           >
-            <div className="mb-2">
-              <span className="text-xs font-semibold tracking-widest uppercase text-sony-blue">03 — Display</span>
+            <div className="mb-3 inline-block">
+              <span className="text-xs font-bold tracking-[0.3em] uppercase text-electric-cyan">03 — Display</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-black tracking-[-0.02em] mb-5 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+            <h2 className="text-6xl md:text-8xl font-black tracking-[-0.02em] mb-6 bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,214,255,0.3)]">
               Clarity that feels natural.
             </h2>
-            <p className="text-white/75 text-base md:text-lg leading-relaxed mb-3 font-light">
+            <p className="text-base md:text-lg text-white/70 max-w-md font-light leading-relaxed border-l-2 border-electric-cyan/50 pl-4 mb-3">
               Micro-displays render text and graphics with sharpness and contrast that blends with reality.
             </p>
-            <p className="text-white/75 text-base md:text-lg leading-relaxed font-light">
+            <p className="text-base md:text-lg text-white/70 max-w-md font-light leading-relaxed border-l-2 border-electric-cyan/50 pl-4">
               Low-power compute ensures smooth, responsive performance all day long.
             </p>
           </motion.div>
@@ -197,13 +197,13 @@ export default function ScrollCanvas({ onLoadProgress, onLoadComplete }: ScrollC
           {/* CTA Section (85-100%) */}
           <motion.div
             style={{ opacity: ctaOpacity }}
-            className="absolute bottom-32 left-8 md:left-16 max-w-md"
+            className="absolute bottom-32 left-8 md:left-16"
             id="experience"
           >
-            <h2 className="text-6xl md:text-7xl font-black tracking-[-0.02em] mb-5 bg-gradient-to-br from-white to-white/80 bg-clip-text text-transparent">
+            <h2 className="text-6xl md:text-8xl font-black tracking-[-0.02em] mb-6 bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,214,255,0.3)]">
               See more. Do more.
             </h2>
-            <p className="text-xl md:text-2xl text-white/80 mb-8 font-light leading-relaxed">
+            <p className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-white to-electric-cyan mb-8 font-bold tracking-tight">
               Sony Smart Glasses. Designed for context, built for the real world.
             </p>
             <div className="flex flex-col gap-4">
