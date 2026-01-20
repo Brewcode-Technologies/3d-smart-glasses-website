@@ -8,8 +8,8 @@ from PIL import Image
 import os
 from pathlib import Path
 
-INPUT_DIR = "public/smart-glasses-all-frames-hd"
-OUTPUT_DIR = "public/smart-glasses-all-frames-hd-cropped"
+INPUT_DIR = "public/video-frames"
+OUTPUT_DIR = "public/video-frames-cropped"
 CROP_BOTTOM = 50  # pixels to remove from bottom
 
 def crop_images():

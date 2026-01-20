@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 
-const FRAME_COUNT = 180;
+const FRAME_COUNT = 140;
 
 interface ScrollCanvasProps {
   onLoadProgress?: (progress: number) => void;
@@ -30,7 +30,7 @@ export default function ScrollCanvas({ onLoadProgress, onLoadComplete }: ScrollC
 
     for (let i = 1; i <= FRAME_COUNT; i++) {
       const img = new Image();
-      img.src = `/smart-glasses-all-frames-hd-cropped/ezgif-frame-${String(i).padStart(3, '0')}.png`;
+      img.src = `/video-frames-cropped/frame-${String(i).padStart(3, '0')}.png`;
       img.onload = () => {
         loadedCount++;
         const progress = (loadedCount / FRAME_COUNT) * 100;
@@ -60,7 +60,8 @@ export default function ScrollCanvas({ onLoadProgress, onLoadComplete }: ScrollC
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
 
-    ctx.imageSmoothingEnabled = false;
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
 
     // Draw first frame immediately
     const firstImg = images[0];
